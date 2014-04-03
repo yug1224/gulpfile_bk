@@ -1,0 +1,21 @@
+{
+  "name": "myapp",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.26"
+  },
+  "scripts": {
+    "start": "gulp build && TZ=UTC NODE_ENV=production pm2 start app.js -o ./log/out.log -e ./log/err.log",
+    "stop": "pm2 kill"
+  },
+  "dependencies": {
+    "coffee-script": "^1.7.1",
+    "gulp": "^3.5.6",
+    "gulp-clean": "^0.2.4",
+    "gulp-coffee": "^1.4.1",
+    "gulp-imagemin": "^0.1.5",
+    "gulp-nodemon": "^1.0.2",
+    "gulp-stylus": "^0.1.0"
+  }
+}
